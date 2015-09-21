@@ -9,14 +9,14 @@ public class Hourglass
     public static void main(String[] args)
     {
         top();        
-        for (int i=2; i<=5; i++)
+        for (int i=1; i<=4; i++)
         {
-            for (int k=1; k<i; k++)
+            for (int k=0; k<i; k++)
             {
                 System.out.print(" ");
             }
             beg();   
-            for (int j=0; j<12-2*i; j++)
+            for (int j=0; j<10-2*i; j++)
             {
                 System.out.print(":");
             }
@@ -24,14 +24,14 @@ public class Hourglass
             System.out.println();
         }  
         middle();
-         for (int i=5; i>=2; i--)
+        for (int i=4; i>=1; i--)
         {
-            for (int k=1; k<i; k++)
+            for (int k=0; k<i; k++)
             {
                 System.out.print(" ");
             }
             end();   
-            for (int j=0; j<12-2*i; j++)
+            for (int j=0; j<10-2*i; j++)
             {
                 System.out.print(":");
             }
@@ -39,25 +39,29 @@ public class Hourglass
             System.out.println();
         }  
         top();
-        
+
     }
 
     public static void top()
+    //prints the top and bottom bar of the hourglass
     {
         System.out.println("|\"\"\"\"\"\"\"\"\"\"|");
     }
 
     public static void middle()
+    //prints the middle of the hourglass
     {
         System.out.println("     ||");
     }
 
     public static void beg()
+    //prints the first slash on the left side
     {
         System.out.print("\\");
     }
 
     public static void end()
+    //prints the end slash on the right side
     {
         System.out.print("/");
     }

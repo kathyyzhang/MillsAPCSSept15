@@ -8,40 +8,44 @@ public class ChristmasTrees
 {
     public static void main(String[] args)
     {
-         int height = 5;
-        int segment = 2; 
-        printTree(height);
-        printSegments(segment);
+        int height = 5;
+        int segment = 3; 
+        printTop(height);
+        printTree(segment);
     }
+
+    public static void printTop(int number)
+    {
+        for (int i=1; i<=number; i++)
+        {
+            for (int j=number; j>=i; j--)
+            {
+                System.out.print(" ");
+            }
+            for (int k=1; k<=3*i-(i+1); k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void printTree(int number)
     {
-        for (int i=1; i<=number; i++)
+        for (int l=1; l<=number; l++)
         {
-           for (int j=number; j>=i; j--)
-           {
-               System.out.print(" ");
-            }
-           for (int k=1; k<=3*i-(i+1); k++)
+            for (int i=1; i<=number; i++)
             {
-                System.out.print("*");
+                for (int j=number; j>=i; j--)
+                {
+                    System.out.print(" ");
+                }
+                for (int k=1; k<=3*i-(i+1); k++)
+                {
+                    System.out.print("*");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
-    }
-    public static void printSegments(int number)
-    {
-        for (int i=1; i<=number; i++)
-        {
-           for (int j=number; j>=i+1; j--)
-           {
-               System.out.print(" ");
-            }
-           for (int k=2; k<=3*i-(i+1); k++)
-            {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-                
     }
 }
